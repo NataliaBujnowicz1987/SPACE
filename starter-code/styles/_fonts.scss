@@ -37,7 +37,8 @@ $accent-color: #D0D6F9;
 
 .fs-18px {
     font-size: 18px;
-    line-height: 1.1;
+    line-height: 1.7em;
+font-family: $text-font-Barlow-regular;
 }
 
 .fs-16px {
@@ -50,12 +51,15 @@ $accent-color: #D0D6F9;
     line-height: 1.1;
 }
 
-
+.uppercase {
+    text-transform: uppercase;
+}
 
 
 h1, h2, h3, h4 {
     font-family: $main-font;
     font-weight: 400;
+    letter-spacing: 0.1em;
 }
 
 h5 {
@@ -73,4 +77,12 @@ p {
     line-height: 1.8em;
     letter-spacing: 0.05em;
     color: $accent-color;
+}
+
+.span-number {
+    font-weight: 700;
+    padding-right: 0.5em;
+    color: $accent-color;
+    font-family: $text-font-Barlow-regular !important;
+
 }
