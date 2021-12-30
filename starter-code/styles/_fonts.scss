@@ -1,0 +1,76 @@
+$main-font:  'Bellefair', serif;
+$text-font-Barlow-condens: 'Barlow Condensed', sans-serif;
+$text-font-Barlow-regular: 'Barlow', sans-serif;
+
+
+
+$black-color: #0B0D17;
+$white-color: #ffffff;
+$accent-color: #D0D6F9;
+
+
+
+.fs-h1 {
+    font-size: 150px;
+    line-height: 1.1;
+}
+
+.fs-h2 {
+    font-size: 100px;
+    line-height: 1.1;
+}
+
+.fs-h3 {
+    font-size: 56px;
+    line-height: 1.1;
+}
+
+.fs-h4 {
+    font-size: 32px;
+    line-height: 1.1;
+}
+
+.fs-h5 {
+    font-size: 28px;
+    line-height: 1.1;
+}
+
+.fs-18px {
+    font-size: 18px;
+    line-height: 1.1;
+}
+
+.fs-16px {
+    font-size: 16px;
+    line-height: 1.1;
+}
+
+.fs-14px {
+    font-size: 14px;
+    line-height: 1.1;
+}
+
+
+
+
+h1, h2, h3, h4 {
+    font-family: $main-font;
+    font-weight: 400;
+}
+
+h5 {
+    letter-spacing: 4.75px;
+    // line-height: 33.6px;
+    font-family: $text-font-Barlow-condens;
+    font-weight: 400;
+}
+
+p {
+    font-family:  $text-font-Barlow-regular;
+    font-weight: 400;
+    max-width: 50ch;
+    font-size: 18px;
+    line-height: 1.8em;
+    letter-spacing: 0.05em;
+    color: $accent-color;
+}
