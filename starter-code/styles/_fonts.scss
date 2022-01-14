@@ -2,13 +2,10 @@ $main-font:  'Bellefair', serif;
 $text-font-Barlow-condens: 'Barlow Condensed', sans-serif;
 $text-font-Barlow-regular: 'Barlow', sans-serif;
 
-
-
 $black-color: #0B0D17;
 $white-color: #ffffff;
-$accent-color: #D0D6F9;
-
-
+// $accent-color: #D0D6F9;
+$accent-color:rgba(255, 255, 255, 0.6);
 
 .fs-h1 {
     font-size: 150px;
@@ -38,7 +35,7 @@ $accent-color: #D0D6F9;
 .fs-18px {
     font-size: 18px;
     line-height: 1.7em;
-font-family: $text-font-Barlow-regular;
+    font-family: $text-font-Barlow-regular;
 }
 
 .fs-16px {
@@ -59,13 +56,13 @@ font-family: $text-font-Barlow-regular;
 h1, h2, h3, h4 {
     font-family: $main-font;
     font-weight: 400;
-    letter-spacing: 0.1em;
+    // letter-spacing: 0.1em;
 }
 
 h5 {
-    letter-spacing: 4.75px;
+    // letter-spacing: 4.75px;
     // line-height: 33.6px;
-    font-family: $text-font-Barlow-condens;
+    font-family: $main-font;
     font-weight: 400;
 }
 
@@ -84,5 +81,35 @@ p {
     padding-right: 0.5em;
     color: $accent-color;
     font-family: $text-font-Barlow-regular !important;
-
 }
+
+h1.pageTitle {
+    height: 100%;
+    font-family: $text-font-Barlow-condens;
+    color: $accent-color;
+    letter-spacing: 4.7px;
+    //     padding-bottom: 3em;
+    .span-number {
+        color: #383B4B;
+    }
+    @media only screen and (max-width: 1200px) {
+  //         padding-bottom: 0em;
+    }
+    @media only screen and (max-width: 1000px)  {
+        margin-top: 1em;
+        // padding-bottom: 0.3em;
+        font-size: 20px;
+        text-align: left;
+        margin-left: -0.5em;
+        // letter-spacing: 0.1em;
+        //         padding-bottom: 1em;
+    }
+    @media only screen and (max-width: 560px)  {
+        font-size: 16px;
+        text-align: center;
+        margin-top: 0;
+        // margin-top: 2em;
+        letter-spacing: 2.7px;
+    }
+}
+

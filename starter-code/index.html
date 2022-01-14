@@ -24,11 +24,11 @@
     </div>
 
     <nav>
-      <ul>
-        <li><a href="index.html"><span class='span-number'>00</span> Home</a></li>
-        <li><a href="destination.html"><span class='span-number'>01</span> Destination</a></li>
-        <li><a href="crew.html"><span class='span-number'>02</span> Crew</a></li>
-        <li><a href="technology.html"><span class='span-number'>03</span> Technology</a></li>
+      <ul class='navActive'>
+        <li><a class='navLink active' href="index.html"><span class='span-number'>00</span> Home</a></li>
+        <li><a class='navLink' href="destination-moon.html"><span class='span-number'>01</span> Destination</a></li>
+        <li><a class='navLink' href="crew.html"><span class='span-number'>02</span> Crew</a></li>
+        <li><a class='navLink' href="technology.html"><span class='span-number'>03</span> Technology</a></li>
       </ul>
     </nav>
 
@@ -39,25 +39,7 @@
         <span></span>
     </div>
 
-        
-    <script>
-      const burger = document.getElementById('menuToggle');
-      const nav = document.querySelector('nav');
-
-      burger.addEventListener('click', () => {
-      nav.classList.toggle('active');
-      })
-
-    // $("#menuToggle").click(() => {
-    //   console.log('klikniety')
-    //   $("header .menu").toggleClass("active-menu");
-    //   $("header").toggleClass("active-menu");
-    // });
-    // $("header .menu a").click(() => {
-    //   $("header .menu").toggleClass("active");
-    // });
-  </script>
-    
+      
   </header>
 
   <section id="space">
@@ -79,5 +61,6 @@
 
   </section>
 
+  <script src="app.js"></script> 
 </body>
 </html>

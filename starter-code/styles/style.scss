@@ -3,6 +3,8 @@
 @import 'header';
 @import 'home';
 @import 'destination';
+@import 'crew';
+@import 'technology';
 
 $black-color: #0B0D17;
 $white-color: #ffffff;
@@ -29,14 +31,14 @@ section {
     min-height: 100vh;
     width: 100%;
     display: flex;
-    padding: 150px;
+    padding: 180px 150px 150px 150px;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: bottom center;
     background-color: $black-color;
     @media only screen and (max-width: 1200px)  {
-        padding: 0 100px;
+        padding: 130px 100px;
     }
     @media only screen and (max-width: 1000px)  {
         padding: 0 50px;
@@ -45,6 +47,8 @@ section {
         padding: 0 30px;
     }
 }
+
+
 
 
 

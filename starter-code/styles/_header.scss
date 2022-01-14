@@ -3,7 +3,7 @@ header {
     width: 100%;
     top: 20px;
     right:0;
-    z-index: 44;
+    z-index: 144;
     height: 96px;
     display: flex;
     align-items: center;
@@ -84,7 +84,6 @@ header {
             transition-duration: .6s; 
             padding: 0;
         }
-    
         ul {
             margin-left: auto;
             display: flex;
@@ -104,16 +103,22 @@ header {
                 margin-top:7em;
                 width: 80%;
             }
-
-
             li {
                 // margin-left: 48px;
                 height: 100%;
                 @media only screen and (max-width: 560px)  { 
                     font-size: 16px;
                     padding:0;
-              
                 }
+                .span-number {
+                    @media only screen and (max-width: 1000px)  {
+                        display: none;
+                    }
+                    @media only screen and (max-width: 560px)  {
+                        display: inline-block;
+                    }
+                }
+             
                 a {
                     color: $accent-color;
                     font-family: $text-font-Barlow-condens;
@@ -133,18 +138,20 @@ header {
                         width: 100%;
                         display: none;
                     }
+             
                     &:hover {
                         &:after {
                             background-color: #979797;
                             display: inline-block;
                         }
                     }
-                    &:focus {
-                        &:after {
-                            background-color: $white-color;
-                            display: inline-block;
-                        }
-                    }
+                    // a.active{
+                    //     &:after {
+                    //         background-color: $white-color;
+                    //         display: inline-block;
+                    //     }
+                    // }
+                 
                     @media only screen and (max-width: 1000px)  {
                         font-size: 14px;
                         padding: 2.5em 0;
@@ -166,6 +173,13 @@ header {
                     //     }
                     // }
                   
+                }
+                a.active{
+                    // z-index: 44;
+                    &:after {
+                        background-color: $white-color;
+                        display: inline-block;
+                    }
                 }
             }
         }
