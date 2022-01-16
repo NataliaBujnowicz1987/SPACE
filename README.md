@@ -2,7 +2,7 @@
 
 ![Design preview for the Space tourism website coding challenge](./preview.jpg)
 
-CHECK THE RESULT HERE: https://nataliabujnowicz1987.github.io/SPACE/starter-code/index.html
+CHECK THE RESULT HERE: https://nataliabujnowicz1987.github.io/SPACE/index.html
 
 ## Welcome! 👋
 
