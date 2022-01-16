@@ -145,13 +145,6 @@ header {
                             display: inline-block;
                         }
                     }
-                    // a.active{
-                    //     &:after {
-                    //         background-color: $white-color;
-                    //         display: inline-block;
-                    //     }
-                    // }
-                 
                     @media only screen and (max-width: 1000px)  {
                         font-size: 14px;
                         padding: 2.5em 0;
@@ -160,22 +153,8 @@ header {
                     @media only screen and (max-width: 560px)  {
                         padding:0 0 1em 0;  
                     }
-
-                    // .span-number {
-                    //     font-weight: 700;
-                    //     padding-right: 0.5em;
-                    //     color: $white-color;
-                    //     @media only screen and (max-width: 1000px) {
-                    //         display: none;
-                    //     }
-                    //     @media only screen and (max-width: 560px) {
-                    //         display: inline-block;
-                    //     }
-                    // }
-                  
                 }
                 a.active{
-                    // z-index: 44;
                     &:after {
                         background-color: $white-color;
                         display: inline-block;
@@ -198,6 +177,7 @@ header {
         right: 2em;
         z-index: 1;
         display: none;
+        transition: all 0.5s linear;
         span {
             // display: flex;
             width: 24px;
@@ -206,7 +186,7 @@ header {
             position: relative;
             background: $accent-color;
             z-index: 1;
-            transform-origin: 5px 0px;
+            // transform-origin: 5px 0px;
             transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
                         background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
                         opacity 0.55s ease;
@@ -215,4 +195,23 @@ header {
             display: flex;
         }
     }
+
+    #menuToggle.is-active span:nth-child(2){
+        opacity: 0;
+      }
+      
+      #menuToggle.is-active span:nth-child(1){
+        -webkit-transform: translateY(3px) rotate(45deg);
+        -ms-transform: translateY(3px) rotate(45deg);
+        -o-transform: translateY(3px) rotate(45deg);
+        transform: translateY(3px) rotate(45deg);
+    
+      }
+      
+      #menuToggle.is-active span:nth-child(3){
+        -webkit-transform: translateY(-13px) rotate(-45deg);
+         -ms-transform: translateY(-13px) rotate(-45deg);
+         -o-transform: translateY(-13px) rotate(-45deg);
+        transform: translateY(-13px) rotate(-45deg);
+      }
 }

@@ -5,8 +5,8 @@
     // background-position: center center;
     height: 100vh;
     @media only screen and (max-width: 1200px) {
-        min-height: 100vh;
-        height: 100%;
+        // min-height: 100vh;
+        // height: 100%;
     }
     @media only screen and (max-width: 1000px) {
         background-image: url(../assets/destination/background-destination-tablet.jpg);
@@ -17,11 +17,13 @@
         // justify-content: center;
         padding-top: 5em;
         padding-bottom: 5em;
+        height: 100%;
     }
     @media only screen and (max-width: 560px) {
         background-image: url(../assets/destination/background-destination-mobile.jpg);
         padding-top: 4em;
         padding-bottom: 3em;
+
     }
 
 
@@ -41,7 +43,7 @@
             width: 75%;
             align-self: flex-end;
             transition: all 2s linear;
-            animation: movePlanet 360s linear infinite alternate;
+            animation: movePlanet 100s linear infinite alternate;
             @keyframes movePlanet {
                 from {
                     transform: rotate(0deg) scale(1);
@@ -73,6 +75,7 @@
             color: $accent-color;
             padding-bottom: 3em;
             letter-spacing: 4.7px;
+            white-space: nowrap;
             .span-number {
                 color: #383B4B;
             }

@@ -24,10 +24,10 @@
 
     <nav>
       <ul>
-        <li><a href="./index.html"><span class='span-number'>00</span> Home</a></li>
-        <li><a href="./destination-moon.html"><span class='span-number'>01</span> Destination</a></li>
-        <li><a class='active' href="./crew.html"><span class='span-number'>02</span> Crew</a></li>
-        <li><a href="technology.html"><span class='span-number'>03</span> Technology</a></li>
+        <li><a class='navLink' href="./index.html"><span class='span-number'>00</span> Home</a></li>
+        <li><a class='navLink' href="./destination-moon.html"><span class='span-number'>01</span> Destination</a></li>
+        <li><a class='navLink active' href="./crew.html"><span class='span-number'>02</span> Crew</a></li>
+        <li><a class='navLink' href="technology.html"><span class='span-number'>03</span> Technology</a></li>
       </ul>
     </nav>
 
@@ -63,8 +63,8 @@
         <div>
           <nav class='nav-dots'>
             <ul>
-              <li class='dotNav-1'><a ></a></li>
-              <li class='dotNav-2'><a ></a></li>
+              <li class='dotNav-1'><a></a></li>
+              <li class='dotNav-2'><a></a></li>
               <li class='dotNav-3'><a></a></li>
               <li class='dotNav-4'><a></a></li>
             </ul>
@@ -100,6 +100,10 @@
         text.textContent = 'Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.';
         img.src = 'assets/crew/image-douglas-hurley.png';
         imgMobile.src = 'assets/crew/image-douglas-hurley.png';
+        dotNav1.classList.add('active');
+        dotNav2.classList.remove('active');
+        dotNav3.classList.remove('active');
+        dotNav4.classList.remove('active');
     })
 
     dotNav2.addEventListener('click', () => {
@@ -108,6 +112,10 @@
         text.textContent = 'Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Linux-based Ubuntu operating system. Shuttleworth became the first South African to travel to space as a space tourist.';
         img.src = 'assets/crew/image-mark-shuttleworth.png';
         imgMobile.src = 'assets/crew/image-mark-shuttleworth.png';
+        dotNav1.classList.remove('active');
+        dotNav2.classList.add('active');
+        dotNav3.classList.remove('active');
+        dotNav4.classList.remove('active');
     })
 
     dotNav3.addEventListener('click', () => {
@@ -116,6 +124,10 @@
         text.textContent = 'Pilot on the first operational flight of the SpaceX Crew Dragon to the International Space Station. Glover is a commander in the U.S. Navy where he pilots an F/A-18.He was a crew member of Expedition 64, and served as a station systems flight engineer. ';
         img.src = 'assets/crew/image-victor-glover.png';
         imgMobile.src = 'assets/crew/image-victor-glover.png';
+        dotNav1.classList.remove('active');
+        dotNav2.classList.remove('active');
+        dotNav3.classList.add('active');
+        dotNav4.classList.remove('active');
     })
 
     dotNav4.addEventListener('click', () => {
@@ -124,6 +136,10 @@
         text.textContent = 'Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space. ';
         img.src = 'assets/crew/image-anousheh-ansari.png';
         imgMobile.src = 'assets/crew/image-anousheh-ansari.png';
+        dotNav1.classList.remove('active');
+        dotNav2.classList.remove('active');
+        dotNav3.classList.remove('active');
+        dotNav4.classList.add('active');
     })
 
 }

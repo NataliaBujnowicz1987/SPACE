@@ -377,6 +377,8 @@ header #menuToggle {
   right: 2em;
   z-index: 1;
   display: none;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
 
 header #menuToggle span {
@@ -386,8 +388,6 @@ header #menuToggle span {
   position: relative;
   background: rgba(255, 255, 255, 0.6);
   z-index: 1;
-  -webkit-transform-origin: 5px 0px;
-          transform-origin: 5px 0px;
   -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
@@ -400,6 +400,20 @@ header #menuToggle span {
     display: -ms-flexbox;
     display: flex;
   }
+}
+
+header #menuToggle.is-active span:nth-child(2) {
+  opacity: 0;
+}
+
+header #menuToggle.is-active span:nth-child(1) {
+  -webkit-transform: translateY(3px) rotate(45deg);
+  transform: translateY(3px) rotate(45deg);
+}
+
+header #menuToggle.is-active span:nth-child(3) {
+  -webkit-transform: translateY(-13px) rotate(-45deg);
+  transform: translateY(-13px) rotate(-45deg);
 }
 
 #space {
@@ -572,13 +586,6 @@ header #menuToggle span {
   height: 100vh;
 }
 
-@media only screen and (max-width: 1200px) {
-  .destination {
-    min-height: 100vh;
-    height: 100%;
-  }
-}
-
 @media only screen and (max-width: 1000px) {
   .destination {
     background-image: url(../assets/destination/background-destination-tablet.jpg);
@@ -590,6 +597,7 @@ header #menuToggle span {
     background-size: 100% 100%;
     padding-top: 5em;
     padding-bottom: 5em;
+    height: 100%;
   }
 }
 
@@ -628,8 +636,8 @@ header #menuToggle span {
       align-self: flex-end;
   -webkit-transition: all 2s linear;
   transition: all 2s linear;
-  -webkit-animation: movePlanet 360s linear infinite alternate;
-          animation: movePlanet 360s linear infinite alternate;
+  -webkit-animation: movePlanet 100s linear infinite alternate;
+          animation: movePlanet 100s linear infinite alternate;
 }
 
 @-webkit-keyframes movePlanet {
@@ -691,6 +699,7 @@ header #menuToggle span {
   color: rgba(255, 255, 255, 0.6);
   padding-bottom: 3em;
   letter-spacing: 4.7px;
+  white-space: nowrap;
 }
 
 .destination div.container h1 .span-number {
@@ -925,6 +934,7 @@ section.crew {
   background-image: url(../assets/crew/background-crew-desktop.jpg);
   display: inline-block;
   background-position: center center;
+  height: 100vh;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -936,7 +946,6 @@ section.crew {
             flex-direction: column;
     background-position: bottom center;
     background-size: cover;
-    overflow-y: hidden;
   }
   .crew h1 {
     padding: 0 50px;
@@ -950,6 +959,7 @@ section.crew {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: start;
+    min-height: 100vh;
   }
 }
 
@@ -965,10 +975,12 @@ section.crew {
 
 .crew .outer-container {
   width: 100%;
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -1010,9 +1022,15 @@ section.crew {
 
 .crew .outer-container .container:first-child {
   position: absolute;
-  top: 40%;
-  height: auto;
+  top: 35%;
+  height: 50%;
   z-index: 44;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -1068,8 +1086,13 @@ section.crew {
 .crew .outer-container .container img {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+}
+
+@media only screen and (max-width: 1025px) {
+  .crew .outer-container .container img {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
 }
 
 @media only screen and (max-width: 560px) {
@@ -1092,6 +1115,12 @@ section.crew {
   .crew .outer-container .container .crew-img-big {
     width: 80%;
     margin: 1em auto 0;
+  }
+}
+
+@media only screen and (max-width: 800px) and (orientation: landscape) {
+  .crew .outer-container .container .crew-img-big {
+    width: 50%;
   }
 }
 
@@ -1141,7 +1170,6 @@ section.crew {
 
 .crew .outer-container .container p {
   margin-top: 1em;
-  margin-bottom: 8em;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -1173,6 +1201,7 @@ section.crew {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 1em 0;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -1215,6 +1244,10 @@ section.crew {
   }
 }
 
+.crew .outer-container .container .nav-dots ul li.active {
+  background-color: #ffffff;
+}
+
 @media only screen and (max-width: 1200px) {
   section.technology {
     padding-left: 150px;
@@ -1232,6 +1265,7 @@ section.crew {
 .technology {
   background-image: url(../assets/technology/background-technology-desktop.jpg);
   background-position: bottom center;
+  height: 100vh;
   position: relative;
 }
 
@@ -1265,6 +1299,10 @@ section.crew {
     background-image: url(../assets/technology/background-technology-mobile.jpg);
     padding-top: 4em;
     padding-bottom: 3em;
+  }
+  .technology h1 {
+    padding: 50px 50px 0 50px;
+    height: auto;
   }
 }
 
